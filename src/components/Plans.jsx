@@ -77,9 +77,9 @@ const Plans = () => {
                             key={plan.name}
                             initial={{ opacity: 0, y: 30 }}
                             whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
-                            transition={{ delay: index * 0.1 }}
-                            className={`relative flex flex-col p-8 rounded-xl border transition-all duration-300 ${plan.highlight
+                            viewport={{ once: true, amount: 0.2 }}
+                            transition={{ delay: index * 0.1, duration: 0.5 }}
+                            className={`relative flex flex-col p-8 rounded-xl border transition-colors duration-300 ${plan.highlight
                                 ? 'bg-zinc-900/80 border-voltage shadow-[0_0_30px_rgba(255,49,49,0.15)] md:-mt-8 md:mb-8'
                                 : 'bg-obsidian border-zinc-800 hover:border-zinc-700'
                                 }`}
@@ -120,7 +120,7 @@ const Plans = () => {
                             </div>
 
                             <button
-                                className={`w-full py-4 font-bold uppercase tracking-widest text-sm transition-all duration-300 transform hover:skew-x-[-10deg] ${plan.highlight
+                                className={`w-full py-4 font-bold uppercase tracking-widest text-sm transition-all duration-300 transform hover:skew-x-[-10deg] cursor-pointer ${plan.highlight
                                     ? 'bg-voltage text-white hover:bg-red-600 shadow-lg'
                                     : 'bg-white text-obsidian hover:bg-gray-200'
                                     }`}

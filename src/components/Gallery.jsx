@@ -16,7 +16,7 @@ const Gallery = () => {
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
-                    className="flex flex-col md:flex-row justify-between items-end mb-12 gap-6"
+                    className="flex flex-col md:flex-row justify-between items-center md:items-end mb-12 gap-6 text-center md:text-left"
                 >
                     <div>
                         <h2 className="font-archivo text-4xl md:text-5xl font-black uppercase mb-2">
@@ -24,7 +24,7 @@ const Gallery = () => {
                         </h2>
                         <p className="text-gray-400">Where the work gets done.</p>
                     </div>
-                    <button className="text-sm font-bold uppercase tracking-widest text-white hover:text-voltage transition-colors border-b border-transparent hover:border-voltage pb-1">
+                    <button className="text-sm font-bold uppercase tracking-widest text-white hover:text-voltage transition-colors border-b border-transparent hover:border-voltage pb-1 cursor-pointer">
                         View Full Gallery
                     </button>
                 </motion.div>
@@ -43,7 +43,7 @@ const Gallery = () => {
                                 <img
                                     src={item.src}
                                     alt={item.label}
-                                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 filter group-hover:brightness-110 grayscale group-hover:grayscale-0"
+                                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 filter group-hover:brightness-110 md:grayscale group-hover:grayscale-0"
                                 />
                                 <div className="absolute inset-0 ring-1 ring-inset ring-white/10 group-hover:ring-voltage/50 transition-all duration-300" />
                             </div>

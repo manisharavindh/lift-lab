@@ -44,14 +44,14 @@ const Navbar = () => {
                             {link.name}
                         </a>
                     ))}
-                    <button className="bg-voltage hover:bg-red-600 text-white px-6 py-2 font-bold uppercase tracking-wider transition-all transform hover:skew-x-[-10deg]">
+                    <button className="bg-voltage hover:bg-red-600 text-white px-6 py-2 font-bold uppercase tracking-wider transition-all transform hover:skew-x-[-10deg] cursor-pointer">
                         Start Now
                     </button>
                 </div>
 
                 {/* Mobile Menu Button */}
                 <button
-                    className="md:hidden text-white"
+                    className="md:hidden text-white cursor-pointer"
                     onClick={() => setIsOpen(!isOpen)}
                 >
                     {isOpen ? <X size={28} /> : <Menu size={28} />}
@@ -77,7 +77,7 @@ const Navbar = () => {
                                 {link.name}
                             </a>
                         ))}
-                        <button className="mt-4 bg-voltage hover:bg-red-600 text-white px-8 py-3 font-bold uppercase tracking-wider w-3/4">
+                        <button className="mt-4 bg-voltage hover:bg-red-600 text-white px-8 py-3 font-bold uppercase tracking-wider w-3/4 cursor-pointer">
                             Start Now
                         </button>
                     </motion.div>

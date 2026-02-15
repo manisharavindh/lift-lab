@@ -44,7 +44,7 @@ const Hero = () => {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
                 >
-                    <button className="group relative px-8 py-4 bg-voltage text-white font-archivo font-bold text-lg uppercase tracking-widest overflow-hidden transition-all hover:bg-red-600 transform hover:-translate-y-1 hover:shadow-[0_0_20px_rgba(255,49,49,0.5)] clip-diagonal">
+                    <button className="group relative px-8 py-4 bg-voltage text-white font-archivo font-bold text-lg uppercase tracking-widest overflow-hidden transition-all hover:bg-red-600 transform hover:-translate-y-1 hover:shadow-[0_0_20px_rgba(255,49,49,0.5)] clip-diagonal cursor-pointer">
                         <span className="relative z-10 group-hover:tracking-[0.2em] transition-all duration-300">
                             Start Your Journey
                         </span>
@@ -59,8 +59,8 @@ const Hero = () => {
                 transition={{ delay: 1, duration: 1 }}
                 className="absolute bottom-10 left-1/2 transform -translate-x-1/2 flex flex-col items-center gap-2"
             >
-                <div className="w-[1px] h-16 bg-gradient-to-b from-transparent via-voltage to-voltage/20" />
-                <span className="text-xs uppercase tracking-widest text-gray-500">Scroll</span>
+                {/* <div className="w-[1px] h-16 bg-gradient-to-b from-transparent via-voltage to-voltage/20" /> */}
+                <span className="text-xs uppercase tracking-widest text-gray-500">Scroll Down</span>
             </motion.div>
         </section>
     );

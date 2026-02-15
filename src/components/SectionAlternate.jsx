@@ -15,20 +15,20 @@ const SectionAlternate = ({ title, description, image, reversed = false, id }) =
                         transition={{ duration: 0.8 }}
                         className="w-full md:w-1/2 relative z-10"
                     >
-                        <div className={`flex items-start ${reversed ? 'flex-row-reverse text-right' : 'flex-row'} gap-6`}>
+                        <div className={`flex flex-col md:flex-row items-center md:items-start ${reversed ? 'md:flex-row-reverse md:text-right' : 'text-left'} gap-6`}>
                             {/* Vertical Gradient Divider */}
                             <div className="hidden md:block w-1.5 h-64 bg-gradient-to-b from-voltage via-red-900/50 to-transparent rounded-full flex-shrink-0" />
 
                             <div>
-                                <h2 className="font-archivo text-4xl md:text-6xl font-black uppercase mb-6 leading-tight">
+                                <h2 className="font-archivo text-4xl md:text-6xl font-black uppercase mb-6 leading-tight text-center md:text-left">
                                     {title}
                                 </h2>
-                                <div className={`h-1 w-20 bg-voltage mb-8 ${reversed ? 'ml-auto' : ''} md:hidden`} />
+                                <div className={`h-1 w-20 bg-voltage mb-8 mx-auto ${reversed ? 'md:ml-auto md:mr-0' : 'md:mx-0'} md:hidden`} />
 
-                                <p className="text-gray-300 text-lg leading-relaxed mb-6 font-light">
+                                <p className="text-gray-300 text-lg leading-relaxed mb-6 font-light text-left">
                                     {description}
                                 </p>
-                                <div className={`text-voltage font-bold tracking-widest uppercase text-sm border-b border-voltage inline-block pb-1 cursor-pointer hover:text-white hover:border-white transition-colors`}>
+                                <div className={`text-voltage font-bold tracking-widest uppercase text-sm border-b border-voltage inline-block pb-1 cursor-pointer hover:text-white hover:border-white transition-colors mt-4 md:mt-0`}>
                                     Learn More
                                 </div>
                             </div>
@@ -47,16 +47,16 @@ const SectionAlternate = ({ title, description, image, reversed = false, id }) =
                             {/* Gradient Fade Overlay - Horizontal with Red Hint */}
                             <div
                                 className={`absolute inset-0 z-10 pointer-events-none opacity-80 md:opacity-100 bg-gradient-to-r ${reversed
-                                        ? 'from-transparent via-transparent to-obsidian'
-                                        : 'from-obsidian via-transparent to-transparent'
+                                    ? 'from-transparent via-transparent to-obsidian'
+                                    : 'from-obsidian via-transparent to-transparent'
                                     }`}
                             />
 
                             {/* Subtle Red Overlay on the text side */}
                             <div
                                 className={`absolute inset-0 z-10 pointer-events-none opacity-30 mix-blend-overlay bg-gradient-to-r ${reversed
-                                        ? 'from-transparent via-voltage/50 to-voltage'
-                                        : 'from-voltage via-voltage/50 to-transparent'
+                                    ? 'from-transparent via-voltage/50 to-voltage'
+                                    : 'from-voltage via-voltage/50 to-transparent'
                                     }`}
                             />
 
